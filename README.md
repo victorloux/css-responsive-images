@@ -15,9 +15,13 @@ Output:
 
 This was made a few years back because there were few CSS-only solutions to do this and I was working on a website with many, very large photos in the background so this was needed for performance, and automation came in very handy. **I'm sure there are better tools and packages for doing this now, this was experimental and may produce fairly inefficient code** (see below), please look for the alternatives if you intend to use it for production. I'm mostly posting it in case anyone wants to build on it, or needs a quick hack for a prototype.
 
+# Demo
+
+[Right there](http://victorloux.github.io/css-responsive-images/).
+
 # Usage
 
-To resize and optimise all of the original images in `app/img` run `gulp images`. This may take a while.
+To resize and optimise all of the original images from **app/img** into **dist/img**, run `gulp images`. This may take a while.
 
 In your sass files, replace any occurence of `background-image` by the mixin `+image`, omitting the extension, like so:
 
@@ -72,4 +76,4 @@ Hurray! Now smaller devices will only load the appropriate image for their size 
 
 Yes, but the theory is that later on in your development process you'll use a CSS minifier/optimiser and it will put all these background-image declarations together under one media query for every size+ratio, so if you have a lot of background images that should be loaded responsively, then it won't spit out that code for every image. On rich pages this might add 3kb of CSS for saving several megabytes on bandwidth.
 
-Also keep in mind here that what takes a lot of the space here is repetition, due to browser prefixes (-moz- and -webkit-). You could modify the media queries to remove them, and use [-prefix-free](leaverou.github.com/prefixfree/). (But then you'd use Javascript for styles and the whole point of this PoC was that you can achieve effortless responsive images without any client-side JS.)
+Also keep in mind here that what takes a lot of the space here is repetition, due to browser prefixes (-moz- and -webkit-). You could modify the media queries to remove them, and use [-prefix-free](http://leaverou.github.com/prefixfree/). (But then you'd use Javascript for styles and the whole point of this PoC was that you can achieve effortless responsive images without any client-side JS.)
