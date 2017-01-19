@@ -1,0 +1,52 @@
+// from Bourbon
+=hidpi($ratio: 1.3)
+    @media only screen and (-webkit-min-device-pixel-ratio: $ratio), only screen and (min--moz-device-pixel-ratio: $ratio), only screen and (-o-min-device-pixel-ratio: #{$ratio}/1), only screen and (min-resolution: round($ratio * 96dpi)), only screen and (min-resolution: $ratio * 1dppx)
+        @content
+
+// First define reusable CSS media queries (will also be usable for the rest of your site)
+
+$mobile-width: 380px
+$tablet-width: 980px
+
+=tablet
+    @media only screen and(max-device-width : $tablet-width) and(orientation : portrait), only screen and(max-width: $tablet-width)
+        @content
+
+=mobile
+    @media only screen and(max-device-width : $mobile-width), only screen and(max-width: $mobile-width)
+        @content
+
+=retina
+    +hidpi(1.5)
+        @content
+
+=tablet-retina
+    +hidpi(1.5)
+        +tablet
+            @content
+
+=mobile-retina
+    +hidpi(1.5)
+        +mobile
+            @content
+
+// Then we'll call this whenever we want a responsive background image
+// @todo: support extensions other than jpg
+=responsiveimage($name)
+    $name: unquote($name)
+    background-image: url(../img/#{$name}_desktop.jpg)
+
+    +retina
+        background-image: url(../img/#{$name}_desktop@2x.jpg)
+
+    +tablet
+        background-image: url(../img/#{$name}_tablet.jpg)
+
+    +tablet-retina
+        background-image: url(../img/#{$name}_tablet@2x.jpg)
+
+    +mobile
+        background-image: url(../img/#{$name}_mobile.jpg)
+
+    +mobile-retina
+        background-image: url(../img/#{$name}_mobile@2x.jpg)

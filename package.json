@@ -1,0 +1,19 @@
+{
+  "name": "css-responsive-images",
+  "version": "1.0.0",
+  "description": "Experimentation to load, via CSS only, background images that are the right size for a specific device and pixel ratio to save bandwidth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Loux",
+  "license": "WTFPL",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-image-optimization": "^0.1.3",
+    "gulp-image-resize": "^0.11.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8"
+  }
+}
