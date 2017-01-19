@@ -1,0 +1,38 @@
+/* line 3, ../../app/sass/style.sass */
+body {
+  background-image: url(../img/andromeda_desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  /* line 3, ../../app/sass/style.sass */
+  body {
+    background-image: url(../img/andromeda_desktop@2x.jpg);
+  }
+}
+@media only screen and (max-device-width: 980px) and (orientation: portrait), only screen and (max-width: 980px) {
+  /* line 3, ../../app/sass/style.sass */
+  body {
+    background-image: url(../img/andromeda_tablet.jpg);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-device-width: 980px) and (orientation: portrait), only screen and (min--moz-device-pixel-ratio: 1.5) and (max-device-width: 980px) and (orientation: portrait), only screen and (-o-min-device-pixel-ratio: 1.5 / 1) and (max-device-width: 980px) and (orientation: portrait), only screen and (min-resolution: 144dpi) and (max-device-width: 980px) and (orientation: portrait), only screen and (min-resolution: 1.5dppx) and (max-device-width: 980px) and (orientation: portrait), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 980px), only screen and (min--moz-device-pixel-ratio: 1.5) and (max-width: 980px), only screen and (-o-min-device-pixel-ratio: 1.5 / 1) and (max-width: 980px), only screen and (min-resolution: 144dpi) and (max-width: 980px), only screen and (min-resolution: 1.5dppx) and (max-width: 980px) {
+  /* line 3, ../../app/sass/style.sass */
+  body {
+    background-image: url(../img/andromeda_tablet@2x.jpg);
+  }
+}
+
+@media only screen and (max-device-width: 380px), only screen and (max-width: 380px) {
+  /* line 3, ../../app/sass/style.sass */
+  body {
+    background-image: url(../img/andromeda_mobile.jpg);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-device-width: 380px), only screen and (min--moz-device-pixel-ratio: 1.5) and (max-device-width: 380px), only screen and (-o-min-device-pixel-ratio: 1.5 / 1) and (max-device-width: 380px), only screen and (min-resolution: 144dpi) and (max-device-width: 380px), only screen and (min-resolution: 1.5dppx) and (max-device-width: 380px), only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 380px), only screen and (min--moz-device-pixel-ratio: 1.5) and (max-width: 380px), only screen and (-o-min-device-pixel-ratio: 1.5 / 1) and (max-width: 380px), only screen and (min-resolution: 144dpi) and (max-width: 380px), only screen and (min-resolution: 1.5dppx) and (max-width: 380px) {
+  /* line 3, ../../app/sass/style.sass */
+  body {
+    background-image: url(../img/andromeda_mobile@2x.jpg);
+  }
+}
